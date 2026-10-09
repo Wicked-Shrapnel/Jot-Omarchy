@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+APP_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+PID_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/sticky-notes/sticky-notes.pid"
+
+if [ "${1:-}" = "--toggle-dock" ]; then
+    if [ -r "$PID_FILE" ]; then
+        pid=$(sed -n '1p' "$PID_FILE" 2>/dev/null || true)
+        if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
+            kill -USR1 "$pid"
+            exit 0
+        fi
+        rm -f "$PID_FILE"
+    fi
+    exec /usr/bin/python3 "$APP_DIR/sticky_notes.py"
+fi
+
+exec /usr/bin/python3 "$APP_DIR/sticky_notes.py" "$@"

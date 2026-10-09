@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "local.sticky-notes",
+  "name": "Sticky Notes",
+  "version": "1.0.0",
+  "author": "Local",
+  "description": "Open the Sticky Notes dock.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "BarWidget.qml"},
+  "barWidget": {
+    "displayName": "Sticky Notes",
+    "description": "Open the sticky notes dock.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}
