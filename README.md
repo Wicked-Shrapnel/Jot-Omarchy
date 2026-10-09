@@ -2,6 +2,7 @@
 Sticky note style note taking plug-in built for Omarchy
 
 I modeled the plug-in after the native sticky note app that comes with Windowdows. I added checklists and an optional title for the notes but other than that it's pretty bare bones and pretty close to how it is and windows.
+<img width="1351" height="872" alt="image" src="https://github.com/user-attachments/assets/3210a1e8-ed0e-46ed-b7ab-72203de03e88" />
 
 ## Requirements
 
