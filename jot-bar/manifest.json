@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "local.jot",
+  "name": "Jot",
+  "version": "1.0.0",
+  "author": "Local",
+  "description": "Open the Jot notes dock.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "BarWidget.qml"},
+  "barWidget": {
+    "displayName": "Jot",
+    "description": "Open the Jot notes dock.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}
