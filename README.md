@@ -1,5 +1,5 @@
 # Jot-Omarchy
-Sticky note style note taking plug-in built for Omarchy.
+Sticky note style note taking plug-in built The ChatGPT codecs for Omarchy.
 This was intended for Omarchy but can be installed on any Windows system. 
 
 I modeled the plug-in after the native sticky note app that comes with Windowdows. I added checklists and an optional title for the notes but other than that it's pretty bare bones and pretty close to how it is and windows.
