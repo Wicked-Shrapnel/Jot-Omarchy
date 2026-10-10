@@ -18,6 +18,11 @@ On Debian, Ubuntu, or related distributions:
 sudo apt install python3 python3-gi gir1.2-gtk-3.0
 ```
 
+Arch
+```bash
+sudo pacman -S python python-gobject gtk3
+```
+
 ## Install and run
 
 Clone or download this repository, then make the launcher executable:
