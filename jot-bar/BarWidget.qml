@@ -25,6 +25,6 @@ Item {
   }
   MouseArea {
     anchors.fill: parent
-      onClicked: if (root.bar) root.bar.run("uwsm-app -- jot --toggle-dock")
+    onClicked: if (root.bar) root.bar.run("uwsm-app -- jot --toggle-dock")
   }
 }

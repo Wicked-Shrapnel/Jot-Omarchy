@@ -348,6 +348,8 @@ class NoteWindow(Gtk.Window):
         if response == Gtk.ResponseType.OK:
             self.note["title"] = entry.get_text().strip()
             self.title.set_text(self.note["title"])
+            self.name_editor.set_text(self.note["title"])
+            self.name_editor.set_visible(bool(self.note["title"]))
             self.changed()
         dialog.destroy()
 
@@ -579,7 +581,10 @@ class NoteWindow(Gtk.Window):
 
     def changed(self):
         buf = self.text.get_buffer()
-        self.note["title"] = self.title.get_text().strip()
+        if hasattr(self, "name_editor"):
+            self.note["title"] = self.name_editor.get_text().strip()
+        else:
+            self.note["title"] = self.title.get_text().strip()
         self.note["text"] = buf.get_text(buf.get_start_iter(), buf.get_end_iter(), True)
         self.note["updated"] = display_date(self.note["updated_at"])
         self.note["updated_at"] = time.time()
